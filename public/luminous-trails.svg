@@ -1,0 +1,12 @@
+<!-- public/luminous-trails.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)">
+    <animate attributeName="x" values="0;1600;0" dur="20s" repeatCount="indefinite" />
+  </rect>
+</svg>

@@ -1,0 +1,13 @@
+/* Tailwind directives */
+@import "tailwindcss";
+
+
+/* Custom fonts */
+@import "@fontsource/poppins"; /* Defaults to 400 */
+@import "@fontsource/poppins/600.css"; /* Bold if needed */
+@import "@fontsource/inter";
+@import "@fontsource/raleway";
+/* index.css */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
