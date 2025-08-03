@@ -42,7 +42,7 @@ const MEDCMS1 = () => {
         <SiVercel key="vercel" />,
      
       ],
-      live: "https://lost-and-found-website-8c162.web.app",
+      live: "https://medical-camp-10888.web.app",
       client: "https://github.com/BELALKHANBK/lost-and-found",
       server:
         "https://github.com/BELALKHANBK/lost-and-found-server-site",

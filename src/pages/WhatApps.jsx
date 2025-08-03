@@ -15,7 +15,7 @@ const socialLinks = [
     bgColor: "bg-green-500 hover:bg-green-600",
   },
   {
-    href: "https://www.facebook.com/yourprofile",
+    href: "https://www.facebook.com/belalkhan2004?mibextid=ZbWKwL",
     label: "Facebook",
     icon: <FaFacebookF />,
     bgColor: "bg-blue-600 hover:bg-blue-700",

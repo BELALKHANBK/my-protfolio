@@ -8,6 +8,9 @@ export default {
         inter: ['Inter', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif'],
       },
+       animation: {
+         'spin-fast': 'spin 0.5s linear infinite', // 0.5s মানে দ্রুত স্পিন
+      },
     },
   },
   plugins: [],

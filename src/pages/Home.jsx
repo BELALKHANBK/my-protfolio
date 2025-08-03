@@ -5,30 +5,44 @@ import Contact from './Contact';
 import Skills from './Skills';
 import Projects from './Projects';
 import WhatApps from './WhatApps';
-
-
+import video from '../assets/image/13949-253035804_small.mp4'
 const Home = () => {
   return (
-    <div id="home">
-      <Banner />
+    <div className="relative w-full h-full" id="home">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      <section id="about">
-        <About />
-      </section>
+      {/* Content Over Video */}
+      <div className="relative z-10 bg-opacity-60">
+        <Banner />
 
-      <section id="skills">
-        <Skills/>
-      </section>
+        <section id="about">
+          <About />
+        </section>
 
-       <section id="projects">
-      <Projects/>
-      </section>
+        <section id="skills">
+          <Skills />
+        </section>
 
-      <section id="contact">
-       <Contact/>
-      </section>  
-    
-      <WhatApps/>
+        <section id="projects">
+          <Projects />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+
+        <WhatApps />
+      </div>
     </div>
   );
 };

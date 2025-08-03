@@ -29,7 +29,7 @@ const Banner = () => {
               Belal Khan
             </span>
           </h1> */}
-          <h2 className="text-4xl md:text-3xl text-red-600 font-semibold">
+          <h2 className="text-4xl lg:text-5xl md:text-3xl text-red-600 font-semibold">
             {/* টাইপিং এনিমেশন */}
             <Typewriter
               words={[
@@ -83,13 +83,24 @@ const Banner = () => {
         </div>
 
         {/* Right: Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
+     {/*    <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={img1}
             alt="Belal Khan"
             className="rounded-full border-4 border-blue-500 shadow-lg object-cover max-w-xs md:max-w-sm lg:max-w-md"
           />
-        </div>
+        </div> */}
+       <div className="relative inline-block p-1  lg:ml-40 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 animate-spin-fast">
+  <div className="bg-white rounded-full p-1">
+    <img
+      src={img1}
+      alt="Belal Khan"
+      className="rounded-full border-4 border-white shadow-lg lg:w-88 lg:h-88 w-48 h-48 object-cover"
+    />
+  </div>
+</div>
+
+
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
-// src/pages/Skills.jsx
 import React from "react";
 import '../index.css';
+import video from '../assets/image/13949-253035804_small.mp4'
 import {
   FaHtml5,
   FaCss3Alt,
@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
+// 🧠 Skills Data
 const skills = [
   {
     name: "HTML",
@@ -88,7 +89,7 @@ const skills = [
   },
 ];
 
-// scrolling animation function
+// 🌀 Scrolling animation config
 const scrollVariants = (direction = "left", delay = 0) => ({
   animate: {
     x: direction === "left" ? ["100%", "-100%"] : ["-100%", "100%"],
@@ -107,68 +108,72 @@ const Skills = () => {
   const oddSkills = skills.filter((_, i) => i % 2 !== 0);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 mt-10 space-y-12 overflow-hidden">
-      {/* Even (Top) Row */}
-   {/*   <div className="max-w-4xl mx-auto px-4 py-8 text-center">
-  <h1 className="text-4xl font-bold text-gray-800 dark:text underline decoration-red-500 underline-offset-8 mb-4">
-    Skills
-  </h1>
-  <p className="text-lg text-gray-600 dark:text-gray-500">
-    A blend of modern web technologies and development skills that I master to build high-quality applications.
-  </p>
-</div> */}
-<div className="max-w-4xl mx-auto px-4 py-8 text-center">
-  <h1 className="text-4xl font-bold text-gray-800 dark:text underline decoration-red-500 underline-offset-8 mb-4 text-shadow">
-    Skills
-  </h1>
-  <p className="text-lg text-gray-600 dark:text-gray-700 text-shadow">
-    A blend of modern web technologies and development skills that I master to build high-quality applications.
-  </p>
-</div>
+    <div className="relative w-full min-h-screen overflow-hidden">
 
-
-      <motion.div
-        className="flex gap-8 justify-center flex-nowrap w-max"
-        variants={scrollVariants("right", 0)}
-        animate="animate"
+      {/* 🔵 Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        {[...evenSkills, ...evenSkills].map((skill, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center gap-1 p-4 bg-white dark:bg-gray-800 shadow rounded hover:scale-105 duration-300 min-w-[120px] text-center"
-          >
-            {skill.icon}
-            <span className="font-semibold text-gray-700 dark:text-white">
-              {skill.name}
-            </span>
-            <p className="text-xs text-gray-500 dark:text-gray-300">
-              {skill.desc}
-            </p>
-          </div>
-        ))}
-      </motion.div>
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      {/* Odd (Bottom) Row */}
-      <motion.div
-        className="flex gap-8 justify-center flex-nowrap w-max"
-        variants={scrollVariants("left", 5)}
-        animate="animate"
-      >
-        {[...oddSkills, ...oddSkills].map((skill, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center gap-1 p-4 bg-white dark:bg-gray-800 shadow rounded hover:scale-105 duration-300 min-w-[120px] text-center"
-          >
-            {skill.icon}
-            <span className="font-semibold text-gray-700 dark:text-white">
-              {skill.name}
-            </span>
-            <p className="text-xs text-gray-500 dark:text-gray-300">
-              {skill.desc}
-            </p>
-          </div>
-        ))}
-      </motion.div>
+      {/* 🔴 Overlay Layer */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/70 z-10" />
+
+      {/* 🌟 Foreground Content */}
+      <div className="relative z-20 max-w-8xl mx-auto px-4 py-12 mt-10 space-y-12 overflow-hidden">
+
+        {/* Heading */}
+        <div className="max-w-4xl mx-auto px-4 py-8 text-center">
+          <h1 className="text-4xl font-bold text-blue-700 underline decoration-red-500 underline-offset-8 mb-4 text-shadow">
+            Skills
+          </h1>
+          <p className="text-lg text-gray-300">
+            A blend of modern web technologies and development skills that I master to build high-quality applications.
+          </p>
+        </div>
+
+        {/* Even Skills Scroll Row */}
+        <motion.div
+          className="flex gap-8 justify-center flex-nowrap w-max"
+          variants={scrollVariants("right", 0)}
+          animate="animate"
+        >
+          {[...evenSkills, ...evenSkills].map((skill, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center gap-1 p-4 bg-white/90 dark:bg-gray-800 shadow rounded hover:scale-105 duration-300 min-w-[120px] text-center"
+            >
+              {skill.icon}
+              <span className="font-semibold text-gray-800 dark:text-white">{skill.name}</span>
+              <p className="text-xs text-gray-600 dark:text-gray-300">{skill.desc}</p>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Odd Skills Scroll Row */}
+        <motion.div
+          className="flex gap-8 justify-center flex-nowrap w-max"
+          variants={scrollVariants("left", 5)}
+          animate="animate"
+        >
+          {[...oddSkills, ...oddSkills].map((skill, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center gap-1 p-4 bg-white/90 dark:bg-gray-800 shadow rounded hover:scale-105 duration-300 min-w-[120px] text-center"
+            >
+              {skill.icon}
+              <span className="font-semibold text-gray-800 dark:text-white">{skill.name}</span>
+              <p className="text-xs text-gray-600 dark:text-gray-300">{skill.desc}</p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };

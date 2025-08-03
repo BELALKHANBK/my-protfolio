@@ -9,7 +9,8 @@ function App() {
     <>
      
       <h1>Vite + React</h1>
-<Home/>
+      
+        <Home/>
 
       
     </>
